@@ -1,0 +1,25 @@
+# general
+seed: 1
+
+# data paths
+bids_path: './data/nemo-bids'
+epochs_path: './processed_data/epochs'
+
+# parsing
+include_events: "empe"
+
+# preprocessing
+ch_interpolation: 'interpolate_average_nearest'
+tddr: True
+combine_channels: None
+bad_subject_treshold: 0
+
+# feature extraction
+ch_selection: 'hbo'
+n_windows: 3
+features: ['MV']
+
+# classification 
+experiment_id: 'snakemake'
+task: '4_class'
+comb: False

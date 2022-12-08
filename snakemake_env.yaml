@@ -1,0 +1,14 @@
+name: nemo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - mne=1.1.1
+  - scikit-learn=1.1.3
+  - pandas=1.5.1
+  - pyyaml=6.0
+  - pip:
+    - git+https://github.com/Kallemakela/mne-bids.git@fnirs_od-support#egg=mne-bids
+    - -e ./../../ # HACK: Install nemo from current directory in a snakemake environment. TODO install from github.
