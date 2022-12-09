@@ -6,7 +6,7 @@ To get started using the dataset, see the [Usage](#usage) section.
 
 To reproduce the results from the paper, see the [Automatic workflow](#automatic-workflow) section.
 
-If you want to export the data to other formats, see the [Exporting data](#exporting-data) section.
+To export the data to other formats, see the [Exporting data](#exporting-data) section.
 
 # Usage
 
