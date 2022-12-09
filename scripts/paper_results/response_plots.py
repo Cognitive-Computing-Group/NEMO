@@ -210,7 +210,7 @@ for name, (include_events, conditions) in evoked_dict.items():
         ip = InsetPosition(afig.axes[-2], [0.19, 0.15, 1.2, 1.05])
         afig.axes[-2].set_axes_locator(ip)
 
-    event_type = "afim" if "afim" == conditions[0][0] else "empe"
+    event_type = "afim" if "afim" == conditions[0][:4] else "empe"
     afig.savefig(
         fig_dir / f"joint_{event_type}_{name}.png",
         dpi=300,
