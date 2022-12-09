@@ -6,6 +6,8 @@ To get started using the dataset, see the [Usage](#usage) section.
 
 To reproduce the results from the paper, see the [Automatic workflow](#automatic-workflow) section.
 
+If you want to export the data to other formats, see the [Exporting data](#exporting-data) section.
+
 # Usage
 
 ## Data
@@ -83,6 +85,15 @@ paper_results # folder containing the results from the paper
 ├── response_plots # joint and topoplots for stimuli types
 ├── val_aro # ground truth valence and arousal plot
 ```
+
+## Exporting data
+
+`python scripts/load_bids.py` provides options for saving the  data as MNE objects at different stages of data processing. The options are:
+1. Before preprocessing (raw OD, continuous) by including argument `--save_od`, e.g. `python scripts/load_bids.py --save_od`. The data will be saved in `processed_data/od/sub-<sub_id>_task-<task_id>_od.fif`.
+2. After preprocessing (haemoglobin concentrations, continuous) by including argument `--save_haemo`. The data will be saved in `processed_data/haemo/sub-<sub_id>_task-<task_id>_haemo.fif`.
+3. After epoching (haemoglobin concentrations, epochs). Done by default, the epochs are saved in `processed_data/epochs/sub-<sub_id>_task-<task_id>_epo.fif`.
+
+The MNE objects can be exported to other formats if needed, see [exporting data from MNE](https://mne.tools/stable/export.html).
 
 # Configuration
 
