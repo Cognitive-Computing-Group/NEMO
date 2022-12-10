@@ -10,7 +10,13 @@ include_events: "empe"
 
 # preprocessing
 ch_interpolation: 'interpolate_average_nearest'
+sci_threshold: 0.8
+bll_ppf: 6
 tddr: True
+l_freq: 0.01
+l_trans_bandwidth: 0.004
+h_freq: 0.1
+h_trans_bandwidth: 0.01 
 combine_channels: None
 bad_subject_treshold: 0
 

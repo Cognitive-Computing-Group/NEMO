@@ -23,7 +23,7 @@ if __name__ == "__main__":
         "--include_events",
         nargs="+",
         default=["empe", "afim"],
-        help="Event(s) to include (default: E, R)",
+        help="Event(s) to include (default: empe, afim)",
     )
     parser.add_argument("--save_od", action="store_true")
     parser.add_argument("--save_haemo", action="store_true")

@@ -7,6 +7,9 @@ import numpy as np
 import mne
 import warnings
 
+from nemo.utils import read_config
+
+config = read_config()
 
 def interpolate_bads_nirs(inst, method="nearest", exclude=(), verbose=None):
     """
@@ -83,14 +86,14 @@ def interpolate_bads_nirs(inst, method="nearest", exclude=(), verbose=None):
 
 def process_raw(
     raw: mne.io.Raw,
-    ch_interpolation="interpolate_average_nearest",
-    sci_threshold=0.8,
-    tddr=True,
-    l_freq=0.01,
-    l_trans_bandwidth=0.004,
-    h_freq=0.1,
-    h_trans_bandwidth=0.01,
-    bll_ppf=6,
+    ch_interpolation=config["ch_interpolation"],
+    sci_threshold=config["sci_threshold"],
+    tddr=config["tddr"],
+    l_freq=config["l_freq"],
+    l_trans_bandwidth=config["l_trans_bandwidth"],
+    h_freq=config["h_freq"],
+    h_trans_bandwidth=config["h_trans_bandwidth"],
+    bll_ppf=config["bll_ppf"],
     verbose=False,
 ) -> mne.io.Raw:
     """
