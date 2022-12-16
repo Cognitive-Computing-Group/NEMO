@@ -127,7 +127,7 @@ table = rf"""\begin{{table}}[!ht]
 \centering
 \setlength{{\tabcolsep}}{{0.43em}}
 {latex}
-\caption{{{multipletest_method} corrected permutation test results for {get_include_events_to_name()[include_events]} {get_classification_methos_to_name()[method]} classification.}}
+\caption{{Permutation test results for {get_include_events_to_name()[include_events]} {get_classification_methos_to_name()[method]} classification. The significance levels are marked with codes: $*$$**$ ($p < 0.001$), $**$ ($p < 0.01$), $*$ ($p < 0.05$), and $.$ ($p \geq 0.05$).}}
 \label{{tab:{include_events}_{method}_permutation_test}}
 \end{{table}}
 """

@@ -67,7 +67,7 @@ table = rf"""\begin{{table}}[!ht]
 \centering
 \setlength{{\tabcolsep}}{{0.43em}}
 {latex}
-\caption{{Accuracy for {get_include_events_to_name()[include_events]} {get_classification_methos_to_name()[method]} model classificication. Bold values are within 2.5\% of the best value on the same row ($\geq 0.975 * max$).}}
+\caption{{Accuracy for {get_include_events_to_name()[include_events]} {get_classification_methos_to_name()[method]} classification. Bold values are within 2.5\% of the best value on the same row ($\geq 0.975 * max$).}}
 \label{{tab:{include_events}_{method}_clf}}
 \end{{table}}
 """

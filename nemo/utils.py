@@ -481,7 +481,7 @@ def get_include_events_to_name():
 
 
 def get_classification_methos_to_name():
-    return {"com": "combined", "ind": "subject-specific"}
+    return {"com": "cross-participant", "ind": "subject-specific"}
 
 
 def get_clf_pretty_abbr():

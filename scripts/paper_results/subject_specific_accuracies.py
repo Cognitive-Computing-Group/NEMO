@@ -54,7 +54,7 @@ for include_events in ["empe", "afim"]:
         plt.xlabel("Accuracy")
         plt.ylabel("Subject")
         plt.title(
-            f'{"Individual" if method == "ind" else "Combined"} {get_include_events_to_name()[include_events]}'.capitalize()
+            f'{"Subject-specific" if method == "ind" else "Cross-participant"} {get_include_events_to_name()[include_events]}'.capitalize()
             + f" {get_clf_pretty_abbr()[clf]}"
         )
         plt.legend()
