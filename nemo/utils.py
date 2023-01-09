@@ -498,3 +498,21 @@ def get_clf_pretty_abbr():
 
 def order_channels(channels):
     return [ch for ch in get_all_channels() if ch in channels]
+
+
+def get_channel_locations(epochs):
+    """
+    Returns a dictionary mapping channel name to channel location.
+
+    Parameters
+    ----------
+    epochs : mne.Epochs
+        Epochs object containing channel locations.
+
+
+    Returns
+    -------
+    dict
+        Dictionary mapping channel name to channel location.
+    """
+    return {ch["ch_name"]: ch["loc"][:2] for ch in epochs.info["chs"]}

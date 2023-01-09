@@ -11,6 +11,7 @@ from nemo.utils import read_config
 
 config = read_config()
 
+
 def interpolate_bads_nirs(inst, method="nearest", exclude=(), verbose=None):
     """
     Added method='average_nearest' to this mne function. It takes the average of the nearest instead of picking the first.
@@ -103,7 +104,7 @@ def process_raw(
     2. Applies TDDR to the raw object.
     3. Converts the optical density data to haemoglobin concentration using the modified Beer-Lambert law.
     4. Applies a band-pass (l_freq=0.01, h_freq=0.1) filter to the raw object
-    
+
     Parameters
     ----------
     file_path : str
