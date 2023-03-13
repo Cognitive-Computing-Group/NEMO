@@ -88,11 +88,11 @@ def bids_to_mne(
             raw_od = read_raw_od(subject, include_events=inc_events)
             if save_od:
                 raw_od.save(
-                    od_fif_path / f"{subject}_task-{inc_events}_od.fif",
+                    od_fif_path / f"{subject}_task-{inc_events}_od_raw.fif",
                     overwrite=True,
                 )
                 logger.info(
-                    f'Saved raw_od to {od_fif_path/f"{subject}_task-{inc_events}_od.fif"}'
+                    f'Saved raw_od to {od_fif_path/f"{subject}_task-{inc_events}_od_raw.fif"}'
                 )
                 if not save_haemo and not save_epochs:
                     continue
@@ -100,11 +100,11 @@ def bids_to_mne(
             raw_haemo = process_raw(raw_od)
             if save_haemo:
                 raw_haemo.save(
-                    haemo_path / f"{subject}_task-{inc_events}_haemo.fif",
+                    haemo_path / f"{subject}_task-{inc_events}_haemo_raw.fif",
                     overwrite=True,
                 )
                 logger.info(
-                    f'Saved raw_haemo to {haemo_path/f"{subject}_task-{inc_events}_haemo.fif"}'
+                    f'Saved raw_haemo to {haemo_path/f"{subject}_task-{inc_events}_haemo_raw.fif"}'
                 )
                 if not save_epochs:
                     continue
