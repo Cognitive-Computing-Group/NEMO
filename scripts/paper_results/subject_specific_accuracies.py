@@ -13,6 +13,7 @@ logger = logging.getLogger(__name__)
 #%%
 fig_dir = get_cwd() / "results" / "paper_results" / "sub_scores"
 fig_dir.mkdir(parents=True, exist_ok=True)
+sdfs = []
 for include_events in ["empe", "afim"]:
     for method in ["ind", "com"]:
         task = "4_class"
@@ -42,21 +43,32 @@ for include_events in ["empe", "afim"]:
         sdf = sdf.drop(
             columns=["model", "clf_method", "permutation_seed", "task"]
         ).sort_values("score", ascending=False)
+        sdf['include_events'] = get_include_events_to_name()[include_events]
+        sdf['method'] = method
+        sdfs.append(sdf)
 
         sns.set_theme(style="whitegrid")
         sns.set_context("paper")
-        sns.set(font_scale=1.5)
+        sns.set(font_scale=2)
 
-        fig = plt.subplots(figsize=(10, 10), dpi=200)
+        fig = plt.subplots(figsize=(8, 10), dpi=200)
         sns.barplot(x="score", y="subject", data=sdf, color="C0")
         plt.axvline(0.25, color="k", linestyle="--", label="Chance")
         plt.xlim(0, 0.6)
         plt.xlabel("Accuracy")
-        plt.ylabel("Subject")
+        if include_events == "empe" and method == "ind":
+            plt.ylabel("Subject")
+        else:
+            plt.ylabel("")
         plt.title(
             f'{"Subject-specific" if method == "ind" else "Cross-participant"} {get_include_events_to_name()[include_events]}'.capitalize()
             + f" {get_clf_pretty_abbr()[clf]}"
         )
+        plt.yticks(
+            range(len(sdf["subject"])),
+            [s[4:] for s in sdf["subject"]],
+        )
+        plt.yticks(fontsize=18)
         plt.legend()
         plt.tight_layout()
         plt.savefig(fig_dir / f"{include_events}-{task}-{method}-best.png", dpi=200)
