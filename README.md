@@ -16,11 +16,11 @@ The data is available in two formats, BIDS and CSV.
 
 #### 1. BIDS
 
-BIDS contains the raw optical density (OD) recordings and corresponding metadata for each participant. This code repository uses the BIDS data to produce the results in the paper. Start using the BIDS data by downloading [nemo-bids](https://osf.io/tcak6) and placing it in the `data/` folder.
+BIDS contains the raw optical density (OD) recordings and corresponding metadata for each participant. This code repository uses the BIDS data to produce the results in the paper. Start using the BIDS data by downloading [nemo-bids](https://osf.io/pfst8) and placing it in the `data/` folder.
 
 #### 2. CSV
 
-The CSV format provides an easy way to access the processed epochs data without needing any code from this repository or other BIDS tools. Epochs are equal-duration chunks of the signal that are time-locked to stimulus onsets[^1]. The CSV data does not offer anything additional to the BIDS data, but it might be more convenient for, e.g. machine learning tasks. To use the CSV data, download [empe_csv](https://osf.io/m4kgn) (Emotional perception) or [afim_csv](https://osf.io/xq2v6) (Affective imagery) and place it in, e.g. the `data/` folder. [scripts/notebooks/classification_from_csv.ipynb](scripts/notebooks/classification_from_csv.ipynb) demonstrates how to use the CSV data for a simple classification task.
+The CSV format provides an easy way to access the processed epochs data without needing any code from this repository or other BIDS tools. Epochs are equal-duration chunks of the signal that are time-locked to stimulus onsets[^1]. The CSV data does not offer anything additional to the BIDS data, but it might be more convenient for, e.g. machine learning tasks. To use the CSV data, download [empe_csv](https://osf.io/7ugnq) (Emotional perception) or [afim_csv](https://osf.io/z6tr9) (Affective imagery) and place it in, e.g. the `data/` folder. [scripts/notebooks/classification_from_csv.ipynb](scripts/notebooks/classification_from_csv.ipynb) demonstrates how to use the CSV data for a simple classification task.
 
 [^1]: https://mne.tools/stable/auto_tutorials/epochs/10_epochs_overview.html
 
