@@ -21,7 +21,7 @@ setuptools.setup(
 	description="The NEMO project",
 	long_description=long_description,
 	long_description_content_type="text/markdown",
-	python_requires='>=3.9',
+	python_requires='>=3.10',
 	url="https://github.com/Cognitive-Computing-Group/NEMO",
 	packages=setuptools.find_packages(),
 	install_requires=install_requires,
