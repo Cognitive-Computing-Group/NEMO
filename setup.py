@@ -22,7 +22,7 @@ setuptools.setup(
 	long_description=long_description,
 	long_description_content_type="text/markdown",
 	python_requires='>=3.9',
-	url="https://github.com/Kallemakela/nemo",
+	url="https://github.com/Cognitive-Computing-Group/NEMO",
 	packages=setuptools.find_packages(),
 	install_requires=install_requires,
 	classifiers=[
