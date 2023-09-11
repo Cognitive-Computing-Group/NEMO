@@ -1,6 +1,6 @@
 # NEMO
 
-This is the accompanying code repository for the NEMO dataset. The fNIRS data can be found at https://osf.io/pd9rv/.
+This is the accompanying code repository for the NEMO dataset. The fNIRS data can be found at https://osf.io/pd9rv/. If there are issues accessing the data on OSF, it is also available at https://zenodo.org/record/8333978.
 
 To get started using the dataset, see the [Usage](#usage) section.
 
